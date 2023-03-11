@@ -12,3 +12,16 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function generatePassword() {
+  var password = "";
+
+  const passwordlength = prompt("How long would you like your password?");
+
+  var lowercase = confirm("Do you want lowercase?");
+  var upppercase = confirm("Do you want uppercase?");
+  var numeric = confirm("Do you want numeric?");
+  var special = confirm("Do you want special?");
+
+  return password;
+}
