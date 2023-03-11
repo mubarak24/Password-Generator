@@ -77,6 +77,8 @@ function generatePassword() {
     password = password + getRandomValue(specialOptions);
     
   }
+  
+  alert("Your password is...");
 
   return password.substring(0, length);
 }
