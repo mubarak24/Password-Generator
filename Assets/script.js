@@ -21,28 +21,36 @@ function generatePassword() {
   var password = "";
 
   const passwordlength = prompt("How long would you like your password?");
-  if (password) {
-    console.log("Secured");
+  if (passwordlength < 8 || passwordlength > 128) {
+    alert('Password length must be atleast 8 characters');
+    return null;
   }
-
   var lowercase = confirm("Do you want lowercase?");
   if (lowercase) {
     console.log("confirmed");
+  } else {
+    console.log("denied");
   }
   var uppercase = confirm("Do you want uppercase?");
   if (uppercase) {
     console.log("confirmed");
+  } else {
+    console.log("denied");
   }
   var numeric = confirm("Do you want numeric?");
   if (numeric) {
     console.log("confirmed");
+  } else {
+    console.log("denied");
   }
   var special = confirm("Do you want special?");
   if (special) {
     console.log("confirmed");
+  } else {
+    console.log("denied");
   }
 
-  const length = 12;
+  const length = passwordlength;
 
   console.log(getRandomValue(lowercaseOptions));
   console.log(getRandomValue(uppercaseOptions));
